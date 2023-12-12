@@ -1,0 +1,49 @@
+html, body {
+    height: 100%; /* Ensure HTML and body take up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* Set the height of the carousel to the full viewport height */
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.carousel-slide {
+    height: 600px; /* Set a fixed height for the container */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Add some space between images */
+}
+
+.carousel-slide img {
+    width: auto; /* Allow images to have different widths */
+    height: 100%; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+    margin: 0 auto; /* Center images horizontally */
+}
+
+.slide-enter {
+    opacity: 0;
+    transform: translateY(-100%) rotateX(90deg); /* Initial 3D rotation */
+}
+
+.slide-enter-active {
+    opacity: 1;
+    transform: translateY(0) rotateX(0); /* Final 3D rotation */
+    transition: opacity 500ms, transform 500ms;
+}
+
+.slide-exit {
+    opacity: 1;
+    transform: translateY(0) rotateX(0); /* Initial 3D rotation for exit */
+}
+
+.slide-exit-active {
+    opacity: 0;
+    transform: translateY(100%) rotateX(-90deg); /* Final 3D rotation for exit */
+    transition: opacity 500ms, transform 500ms;
+}
