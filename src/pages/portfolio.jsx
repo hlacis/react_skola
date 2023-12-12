@@ -9,7 +9,7 @@ function Portfolio() {
             <section id="section1">
                 <h2>Sekce 1</h2>
                 {"\n" +
-                    "Krysa, drobný hlodavec z rodu Ratus,\n" +
+                    "Krysa, drobný hlodavec z rodu Rattus,\n" +
                     "\n" +
                     "je známá svou schopností přizpůsobit se různým prostředím a rychlým rozmnožováním.\n" +
                     "\n" +
